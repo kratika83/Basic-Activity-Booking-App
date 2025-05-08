@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "572beeb2-fda5-4296-bc7a-0fdbd92bfaa8",
+		"name": "Basic activity booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25160031"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"User\",\r\n    \"email\": \"user@test.com\",\r\n    \"password\": \"User@123\",\r\n    \"phone\":\"7897911021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/v1/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@test.com\",\r\n    \"password\": \"User@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/v1/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "book activity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MWM5MDBlYjMwMDYyNDk1N2U5Y2I1OCIsImVtYWlsIjoidXNlckB0ZXN0LmNvbSIsImlhdCI6MTc0NjcwMzA3OSwiZXhwIjoxNzQ2Nzg5NDc5fQ.8K3jvpn68cpBH_oiRDX-D9oije3gR61tdpSI4fXtbTk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activity\": \"681c97d836c683770e47ddf2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/v1/api/bookings/book-activity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"api",
+								"bookings",
+								"book-activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all bookings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MWM5MDBlYjMwMDYyNDk1N2U5Y2I1OCIsImVtYWlsIjoidXNlckB0ZXN0LmNvbSIsImlhdCI6MTc0NjcwMzA3OSwiZXhwIjoxNzQ2Nzg5NDc5fQ.8K3jvpn68cpBH_oiRDX-D9oije3gR61tdpSI4fXtbTk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/v1/api/bookings/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"api",
+								"bookings",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get activities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/api/activities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"activities",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+    "lang_record_found": "Record found",
+    "lang_record_not_found": "No record found",
+    "lang_signup_success": "Signed Up Successfully",
+    "lang_login_success": "Logged in successfully",
+    "lang_email_already_exist": "Email already exist",
+    "lang_user_not_found": "User not found",
+    "lang_incorrect_password": "Incorrect password",
+    "lang_invalid_token": "Invalid token",
+    "lang_forbidden": "Forbidden",
+    "lang_access_denied": "Access denied. No token provided",
+    "lang_book_activity_success": "Activity booked successfully"
+}
